@@ -1,10 +1,11 @@
 <?php
 
-$names = [
-    'Tariq',
-    'Anas',
-    'Milod'
-
+$animals = [
+    'cat',
+    'dog',
+    'snake',
+    'parrot',
+    'bear'
 ];
 
 require 'index.view.php';
