@@ -6,6 +6,7 @@ $person = [
 ];
 
 $person['name'] = 'Tariq';
+unset($person['age']);
 var_dump($person);
 //die();
 
