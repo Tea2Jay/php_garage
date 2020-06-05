@@ -1,15 +1,15 @@
 <?php
+require 'function.php';
 
 $task = [
     'title' => 'homework',
     'due' => 'tommorw',
     'assigned_to' => 'Tariq',
-    'completed' => true 
+    'completed' => true
 
 ];
 
+dd($task);
 
-var_dump($task);
-//die();
 
 require 'index.view.php';
