@@ -9,7 +9,13 @@ $task = [
 
 ];
 
-dd($task);
+//dd($task);
 
+if (checkAge(22)) {
+    echo "Come on in";
+} else {
+    echo " you are not old enough";
+}
+die();
 
 require 'index.view.php';
