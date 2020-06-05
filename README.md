@@ -1,1 +1,2 @@
-"# php_garage" 
+"# php_garage"
+Learning php from scratch  
