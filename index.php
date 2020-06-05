@@ -1,13 +1,15 @@
 <?php
 
-$person = [
-    'age' => 20,
-    'hair' => 'black'
+$task = [
+    'title' => 'homework',
+    'due' => 'tommorw',
+    'assigned_to' => 'Tariq',
+    'completed' => true 
+
 ];
 
-$person['name'] = 'Tariq';
-unset($person['age']);
-var_dump($person);
+
+var_dump($task);
 //die();
 
 require 'index.view.php';
