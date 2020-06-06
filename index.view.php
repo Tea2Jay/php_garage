@@ -8,26 +8,14 @@
 
 <body>
     <ul>
-        <li>
-            <strong>Name:</strong> <?= $task['title'] ?>
-        </li>
-        <li>
-            <strong>Due date:</strong> <?= $task['due'] ?>
-        </li>
-        <li>
-            <strong>Person responsible:</strong> <?= $task['assigned_to'] ?>
-        </li>
-        <li>
-            <strong>Status:</strong>
-            <?php if ($task['completed']) : ?>
-                <span>&#9989;</span>
+        <?php foreach ($tasks as $task) : ?>
+            <?php if ($task->isComplete()) : ?>
+                <li><strike><?= $task->description ?> </strike></li>
             <?php else : ?>
-                <span>&#10060;</span>
+                <li><?= $task->description ?></li>
             <?php endif ?>
-        </li>
-
+        <?php endforeach ?>
     </ul>
-
 
 </body>
 

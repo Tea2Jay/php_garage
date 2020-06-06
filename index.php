@@ -1,21 +1,36 @@
 <?php
 require 'function.php';
 
-$task = [
-    'title' => 'homework',
-    'due' => 'tommorw',
-    'assigned_to' => 'Tariq',
-    'completed' => true
+class Task
+{
+    public $description;
+    public $completed;
 
+    public function __construct($description)
+    {
+        $this->description = $description;
+        $this->completed = false;
+    }
+
+    public function complete()
+    {
+        $this->completed = true;
+    }
+
+    public function isComplete()
+    {
+        return $this->completed;
+    }
+
+}
+
+$tasks = [
+    new Task('go to the store'),
+    new Task('do HW'),
+    new Task('clean room')
 ];
 
-//dd($task);
+$tasks[0]->complete();
 
-if (checkAge(22)) {
-    echo "Come on in";
-} else {
-    echo " you are not old enough";
-}
-die();
 
 require 'index.view.php';
