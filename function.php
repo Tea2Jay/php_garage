@@ -7,11 +7,18 @@ function dd($var)
     echo '</pre>';
 }
 
-function checkAge($age)
+function connectToDb()
 {
-    if ($age > 21) {
-        return true;
-    } else {
-        return false;
+    try {
+        return new PDO('mysql:host=127.0.0.1;dbname=mytodo', 'root', '');
+    } catch (PDOException $e) {
+        die($e->getMessage());
     }
+}
+
+function fetchAll($pdo)
+{
+    $statment = $pdo->prepare('select * from todos');
+    $statment->execute();
+    return $statment->fetchAll(PDO::FETCH_CLASS, 'Task');
 }
