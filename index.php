@@ -1,13 +1,7 @@
 <?php
 
-//require 'function.php';
-require 'Task.php';
+require 'function.php';
 
-$query = require 'bootstrap.php';
+$database = require 'core/bootstrap.php';
 
-
-
-$tasks = $query->selectAll('todos', 'Task');
-
-//dd($tasks);
-require 'index.view.php';
+require Router::load('routes.php')->direct(Request::URI());
