@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php require('partials/header.php') ?>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Documnet</title>
-</head>
+<h1>Contact us</h1>
 
-<body>
-
-    <h1>Contact us</h1>
-    
-</body>
-
-</html>
+<?php require('partials/footer.php') ?>

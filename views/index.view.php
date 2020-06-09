@@ -1,22 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php require('partials/header.php') ?>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Documnet</title>
-</head>
+<h1>My Tasks</h1>
 
-<body>
-    <ul>
-        <?php foreach ($tasks as $task) : ?>
-            <?php if ($task->completed) : ?>
-                <li><strike><?= $task->description ?> </strike></li>
-            <?php else : ?>
-                <li><?= $task->description ?></li>
-            <?php endif ?>
-        <?php endforeach ?>
-    </ul>
+<ul>
+    <?php foreach ($tasks as $task) : ?>
+        <?php if ($task->completed) : ?>
+            <li><strike><?= $task->description ?> </strike></li>
+        <?php else : ?>
+            <li><?= $task->description ?></li>
+        <?php endif ?>
+    <?php endforeach ?>
+</ul>
 
-</body>
 
-</html>
+<?php require('partials/footer.php') ?>
