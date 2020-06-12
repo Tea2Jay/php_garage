@@ -26,3 +26,4 @@ Thumbs.db
 #custom ignore#
 ###############
 config.php
+/vendor
