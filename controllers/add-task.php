@@ -2,6 +2,12 @@
 
 
 
-$app['database']->insert('todos', $_POST['descrption'], $_POST['completed']);
+$app['database']->insert(
+    'todos',
+    [
+        'description' => $_POST['description'],
+        'completed' => $_POST['completed']
+    ]
+);
 
-var_dump($app['database']->selectAll('todos','Task'));
+ header('Location: /');
