@@ -2,7 +2,7 @@
 
 
 
-$app['database']->insert(
+App::get('database')->insert(
     'todos',
     [
         'description' => $_POST['description'],
