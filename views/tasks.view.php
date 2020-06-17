@@ -1,18 +1,16 @@
 <?php require('partials/header.php') ?>
 
-
-<h1>Home page</h1>
-<!-- <?php foreach ($tasks as $task) : ?>
+<?php foreach ($tasks as $task) : ?>
     <li><?= $task->description . "\t" . $task->completed ?></li>
 <?php endforeach ?>
 
 <h1>Enter your Task</h1>
-<form method="POST" action="/task">
+<form method="POST" action="/tasks">
     <input name="description">
     <input name="completed">
     <button type="submit">Submit</button>
 
 
-</form> -->
+</form>
 
 <?php require('partials/footer.php') ?>
